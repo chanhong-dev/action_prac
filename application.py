@@ -8,7 +8,7 @@ cors = CORS(application, resources={r"/*": {"origins": "*"}})
 
 @application.route('/')
 def main():
-    return render_template("index.html")
+    return "테스트"
 
 @application.route('/fileupload', methods=['POST'])
 def file_upload():
