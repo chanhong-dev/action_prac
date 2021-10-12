@@ -18,7 +18,7 @@
         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
                 integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
                 crossorigin="anonymous"></script>
-
+        <script defer src="../static/index.js"></script>
         <!-- 구글폰트 -->
         <link href="https://fonts.googleapis.com/css?family=Stylish&display=swap" rel="stylesheet">
 
@@ -59,25 +59,7 @@
         </style>
 
         <script>
-             $(document).ready(function(){
-                getCount();
-                getFiles();
-             })
 
-             function save() {
-                var form_data = new FormData($('#upload-file')[0]);
-                $.ajax({
-                    type: 'POST',
-                    url: 'http://pythonweek-env.eba-p9tank2p.ap-northeast-2.elasticbeanstalk.com/fileupload',
-                    data: form_data,
-                    processData: false,
-                    contentType: false,
-                    success: function (data) {
-                        alert("파일이 업로드 되었습니다!!");
-                        location.reload();
-                    },
-                });
-            }
         </script>
     </head>
     <body>
